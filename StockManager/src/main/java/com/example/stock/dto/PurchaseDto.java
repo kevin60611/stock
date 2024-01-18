@@ -1,5 +1,5 @@
 package com.example.stock.dto;
 
-public class PurchaseDTO {
+public class PurchaseDto {
 
 }
