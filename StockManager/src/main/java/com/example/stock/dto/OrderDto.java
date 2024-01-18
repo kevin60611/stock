@@ -13,28 +13,23 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class PurchaseDto {
-	private Long id; // 採購單序號
+public class OrderDto {
+private Long id; // 訂單序號
 	
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private Date date; // 採購日期
-	
-	private SupplierDto supplier;
-	
+	private Date date; // 訂單日期
+	private CustomerDto customer;
+	private Set<OrderItemDto> orderItems = new LinkedHashSet<>();
 	private EmployeeDto employee;
 	
-	private Date expectedArrivalDate; // 預計到貨日
-	
-	private Set<PurchaseItemDto> purchaseItems = new LinkedHashSet<>();
-	
-	// 計算採購單總價
+	// 計算訂單總價
 	public Integer getTotal() {
-		if(purchaseItems.size() == 0) {
+		if(orderItems.size() == 0) {
 			return 0;
 		}
-		return purchaseItems.stream()
-				.mapToInt(item -> item.getAmount() * item.getProduct().getCost())
+		return orderItems.stream()
+				.mapToInt(item -> item.getAmount() * item.getProduct().getPrice())
 				.sum();
 	}
 }
