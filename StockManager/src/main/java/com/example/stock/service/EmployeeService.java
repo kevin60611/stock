@@ -9,9 +9,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.example.stock.dto.EmployeePageDto;
-import com.example.stock.dto.EmployeeDto;
-import com.example.stock.entity.Employee;
+import com.example.stock.model.dto.EmployeePageDto;
+import com.example.stock.model.dto.EmployeeDto;
+import com.example.stock.model.entity.Employee;
 import com.example.stock.repository.EmployeeRepository;
 
 @Service

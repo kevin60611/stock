@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.stock.dto.EmployeeDto;
-import com.example.stock.dto.EmployeePageDto;
-import com.example.stock.entity.Employee;
+import com.example.stock.model.dto.EmployeeDto;
+import com.example.stock.model.dto.EmployeePageDto;
+import com.example.stock.model.entity.Employee;
 import com.example.stock.service.EmployeeService;
 
 @Controller
