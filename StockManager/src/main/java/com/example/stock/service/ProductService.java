@@ -36,6 +36,9 @@ public class ProductService {
 			product.setName(productDto.getName());
 			product.setCost(productDto.getCost());
 			product.setPrice(productDto.getPrice());
+			product.setUnit(productDto.getUnit());
+			product.setMinPurchaseQuantity(productDto.getMinPurchaseQuantity());
+			product.setLeadTime(productDto.getLeadTime());
 			productRepository.save(product);
 		} 
 	}
