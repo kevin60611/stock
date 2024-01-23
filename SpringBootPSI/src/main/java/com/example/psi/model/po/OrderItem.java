@@ -1,4 +1,4 @@
-package com.example.stock.model.entity;
+package com.example.psi.model.po;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -8,11 +8,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "orders_item")
+@Table(name = "order_item")
 @Getter
 @Setter
 public class OrderItem {
@@ -26,9 +27,6 @@ public class OrderItem {
 	@Column
 	private Integer price; // 商品售價
 	
-	//@Column
-   // private String unit; // 商品單位
-	
 	@JoinColumn(name = "order_id")
 	@ManyToOne
 	private Order order;
@@ -39,12 +37,8 @@ public class OrderItem {
 
 	@Override
 	public String toString() {
-		return "OrderItem [id=" + id + ", amount=" + amount + ", price=" + price + ", order=" + order
-				+ ", product=" + product + "]";
+		return "OrderItem [id=" + id + ", amount=" + amount + ", price=" + price + ", order=" + order + ", product="
+				+ product + "]";
 	}
-//	@Override
-//	public String toString() {
-//		return "OrderItem [id=" + id + ", amount=" + amount + ", price=" + price + ", unit=" + unit + ", order=" + order
-//				+ ", product=" + product + "]";
-//	}
+	
 }

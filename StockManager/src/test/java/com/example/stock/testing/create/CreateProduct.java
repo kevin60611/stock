@@ -18,7 +18,7 @@ public class CreateProduct {
 		p1.setName("百合花");
 		p1.setCost(10);
 		p1.setPrice(40);
-		p1.setUnit(40);
+		p1.setUnit("支");
 		p1.setMinPurchaseQuantity(40);
 		p1.setLeadTime(40);
 		

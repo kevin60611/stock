@@ -11,5 +11,5 @@ public class PurchaseItemDto {
 	private Integer amount; // 採購數量
 	private PurchaseDto purchase;
 	private ProductDto product;
-	private String unit; // 採購單位
+	// private String unit; // 採購單位
 }
