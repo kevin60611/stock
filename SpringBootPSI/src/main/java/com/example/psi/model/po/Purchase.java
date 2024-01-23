@@ -53,5 +53,4 @@ public class Purchase {
 		return "Purchase [id=" + id + ", date=" + date + ", supplier=" + supplier + ", employee=" + employee + "]";
 	}
 	
-	
 }

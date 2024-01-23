@@ -11,9 +11,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OrderBy;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "product")
+@Getter
+@Setter
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

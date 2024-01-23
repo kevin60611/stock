@@ -8,4 +8,6 @@ import com.example.psi.model.po.Department;
 @Repository
 public interface DepartmentRepository extends JpaRepository<Department, Long> {
 
+
 }
+

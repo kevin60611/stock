@@ -27,7 +27,7 @@ public class Customer {
 	
 	@Column
 	private String name; // 客戶姓名
-	
+
 	@OneToMany(mappedBy = "customer")
 	@OrderBy("id ASC")
 	private Set<Order> orders = new LinkedHashSet<>();

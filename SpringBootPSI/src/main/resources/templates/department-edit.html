@@ -11,6 +11,7 @@
 		<!-- Header -->
 		<div th:include="header :: header"></div>
 		<!-- Content -->
+<<<<<<< HEAD
 		<h1>修改部門</h1>
 		<form action="#" th:action="@{/department/{id}(id=${departmentDTO.id})}" th:object="${departmentDTO}" method="post">
 			<input type="hidden" name="_method" value="PUT" />
@@ -18,6 +19,15 @@
 				<input type="hidden" th:field="*{id}" id="id">
 				<label>部門名稱:</label>				
 				<input type="text" th:field="*{name}" id="name" class="form-control" placeholder="請輸入部門名稱">
+=======
+		<h1>部門-修改</h1>
+		<form action="#" th:action="@{/department/{id}(id=${departmentDto.id})}" th:object="${departmentDto}" method="post">
+			<input type="hidden" name="_method" value="PUT" />
+			<div class="form-group">
+				<input type="hidden" th:field="*{id}" id="id">
+				<label>部門名稱:</label>				
+				<input type="text" th:field="*{name}" id="name" class="form-control" placeholder="請輸入部門名稱" required>
+>>>>>>> branch 'master' of https://github.com/vincenttuan/SpringBoot20240103.git
 			</div>
 			<input type="submit" value="修改部門" class="btn btn-primary" />
 		</form>

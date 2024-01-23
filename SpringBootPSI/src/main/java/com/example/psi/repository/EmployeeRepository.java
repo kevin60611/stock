@@ -8,4 +8,7 @@ import com.example.psi.model.po.Employee;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
+
 }
+
+
