@@ -38,7 +38,7 @@ public class EmployeeService {
         if (employeeOpt.isPresent()) {
             Employee employee = employeeOpt.get();
             employee.setName(employeeDto.getName()); // 更新員工姓名
-            // 不再需要更新部門的相關邏輯
+            employee.setTitle(employeeDto.getTitle()); // 更新職稱
             employeeRepository.save(employee);
         }
     }

@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OrderBy;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,9 +26,6 @@ public class OrderItem {
 	
 	@Column
 	private Integer price; // 商品售價
-	
-	//@Column
-   // private String unit; // 商品單位
 	
 	@JoinColumn(name = "order_id")
 	@ManyToOne

@@ -17,6 +17,12 @@
 				<label>客戶名稱:</label>
 				<input type="text" th:field="*{name}" id="name" class="form-control" placeholder="請輸入客戶名稱" required>
 			</div>
+			
+			<div class="form-group">
+				<label>手機號碼:</label>
+				<input type="text" th:field="*{phoneNumber}" id="phoneNumber" class="form-control" placeholder="請輸入手機號碼" >
+			</div>
+			
 			<input type="submit" value="新增客戶" class="btn btn-primary" />
 		</form>
 		<p />
@@ -26,6 +32,7 @@
 				<tr>
 					<th>序號</th>
 					<th>客戶名稱</th>
+					<th>手機號碼</th>
 					<th>訂單集合</th>
 					<th>編輯</th>
 					<th>刪除</th>
@@ -35,8 +42,14 @@
 				<tr th:each="customer : ${customerDtos}">
 					<td th:text="${customer.id}"></td>
 					<td th:text="${customer.name}"></td>
+					<td th:text="${customer.phoneNumber}"></td>
 					<td>
-						...
+						 <ul>
+			                <!-- 遍歷顯示客戶的訂單集合 -->
+			                <li th:each="order : ${customer.orders}">
+			                    <span th:text="${order.orderNumber}"></span> <!-- 替換成實際的訂單屬性 -->
+			                </li>
+        			    </ul>
 					</td>
 					<td><a th:href="@{/customer/edit/{id}(id=${customer.id})}" class="btn btn-primary">編輯</a></td>
 					<td><a th:href="@{/customer/delete/{id}(id=${customer.id})}" class="btn btn-danger">刪除</a></td>

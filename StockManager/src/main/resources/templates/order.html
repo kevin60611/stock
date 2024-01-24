@@ -36,8 +36,8 @@
 				<select class="form-control select2" th:field="*{employee.id}" id="employee.id">
 					<option th:each="emp:${employeeDtos}" th:value="${emp.id}" th:text="${emp.name}"></option>
 				</select>
-			</div>
-			
+			</div>	
+
 			<input type="submit" value="新增訂單" class="btn btn-primary" />
 		</form>
 		<p />

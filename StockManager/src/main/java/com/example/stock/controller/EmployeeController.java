@@ -1,7 +1,5 @@
 package com.example.stock.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -17,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.stock.model.dto.EmployeeDto;
 import com.example.stock.model.dto.EmployeePageDto;
-import com.example.stock.model.entity.Employee;
 import com.example.stock.service.EmployeeService;
 
 @Controller
